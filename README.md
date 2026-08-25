@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 # Personal Finance Manager
 
 Sistema web para gerenciamento de finanças pessoais.

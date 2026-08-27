@@ -6,6 +6,12 @@ Sistema web para gerenciamento de finanças pessoais.
 
 Em desenvolvimento.
 
+## 📚 Documentação
+
+A documentação detalhada do projeto, incluindo arquitetura, requisitos e roadmap, está disponível no Notion:
+
+👉 [Acessar Documentação no Notion](https://app.notion.com/p/Personal-Finance-Manager-3c6d13d0ae1180aa8238c98c27f334d4?source=copy_link)
+
 ## 🛠️ Stack
 
 - Laravel

@@ -2,32 +2,39 @@
 
 namespace App\Models;
 
+use App\Enums\CategoryType;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Relations\HasMany;
 use Illuminate\Database\Eloquent\Relations\BelongsTo;
 use Illuminate\Database\Eloquent\Model;
 
-class Account extends Model
+class Transaction extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'name',
         'type',
-        'initial_balance',
+        'description',
+        'amount',
+        'date',
     ];
 
     protected function casts(): array
     {
         return [
-            'initial_balance' => 'decimal:2',
-            'is_active' => 'boolean',
+            'type' => CategoryType::class,
+            'date' => 'date',
+            'amount' => 'decimal:2'
         ];
     }
 
-    public function transactions(): HasMany
+    public function category(): BelongsTo
     {
-        return $this->hasMany(Transaction::class);
+        return $this->belongsTo(Category::class);
+    }
+    
+    public function account(): BelongsTo
+    {
+        return $this->belongsTo(Account::class);
     }
 
     public function user(): BelongsTo
